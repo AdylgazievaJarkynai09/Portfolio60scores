@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bento Grid Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SVG-иконки (вместо смайликов) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m2 12 10 5 10-5M2 17l10 5 10-5"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3h2v18H5zM8 4h12l-3 4.5L20 13H8z"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="8.5" cy="10" r="1.5" fill="#14141a"/><circle cx="15.5" cy="10" r="1.5" fill="#14141a"/><path d="M7.5 14.5q4.5 4 9 0" stroke="#14141a" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 2.4 6.2L21 9l-5 4.3L17.5 20 12 16.5 6.5 20 8 13.3 3 9l6.6-.8z"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3h6a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v3H2V9a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2Zm0 2v2h6V5Z"/><path fill="currentColor" d="M2 14h8v1.5h4V14h8v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2" fill="currentColor"/><rect x="13" y="3" width="8" height="8" rx="2" fill="currentColor"/><rect x="3" y="13" width="8" height="8" rx="2" fill="currentColor"/><rect x="13" y="13" width="8" height="8" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3c4 0 7 1 7 1s1 3 1 7c-2 3-5 5-8 6l-4-4c1-3 3-6 4-10Z"/><circle cx="15.5" cy="8.5" r="1.6" fill="#14141a"/><path fill="currentColor" d="M7 12c-2 0-4 1-5 4l3 1zM12 17l1 3c3-1 4-3 4-5z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="M8.5 11.5 11 14l4.5-4.5" stroke="#14141a" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path fill="currentColor" d="M3 7l4.5 4L12 4l4.5 7L21 7l-2 11H5z"/><rect x="5" y="19" width="14" height="2" rx="1" fill="currentColor"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 20h16" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Z"/><circle cx="12" cy="9" r="2.6" fill="#1b1b1f"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 12h19M12 2.5c3 3 3 16 0 19M12 2.5c-3 3-3 16 0 19" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V16h2V9z"/><path fill="currentColor" d="M5 13.5V17c0 1.5 3 3 7 3s7-1.500 7-3v-3.500L12 17.500z"/></symbol>
+  <symbol id="i-dot" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor"/><circle cx="12" cy="12" r="4" fill="#1b1b1f"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v.5l-10 6.500L2 6.500V6a1 1 0 0 1 1-1Zm-1 4.200 10 6.500 10-6.500V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h2a2 2 0 0 1 2 2v3H3V6a2 2 0 0 1 2-2h2Z"/><path fill="currentColor" d="M3 11h18v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><rect x="7" y="14" width="4" height="3" rx=".8" fill="#1b1b1f"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.500" fill="none" stroke="currentColor" stroke-width="2.200"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.200"/><circle cx="17.200" cy="6.800" r="1.300" fill="currentColor"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2Z"/><path d="M8.500 8c.3 4 3.500 7 7.500 7.500l1.200-1.700-2.300-1.100-1 .9c-1.300-.6-2.300-1.600-2.900-2.900l.9-1L10.800 7z" fill="#1b1b1f"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><path d="M7 10v7M7 7v.1M11 17v-7m0 3c0-2 1.500-3 3-3s3 1 3 3v4" stroke="#1d1d20" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-bird" viewBox="0 0 24 24"><path fill="currentColor" d="M22 5.800c-.7.300-1.500.6-2.400.7.900-.5 1.500-1.300 1.800-2.300-.8.500-1.700.8-2.600 1a4.100 4.100 0 0 0-7 3.700A11.600 11.600 0 0 1 3.400 4.600a4.100 4.100 0 0 0 1.300 5.500c-.7 0-1.300-.2-1.900-.5 0 2 1.400 3.700 3.300 4.100-.6.200-1.200.2-1.900.1.500 1.600 2 2.800 3.800 2.900A8.200 8.200 0 0 1 2 18.400 11.600 11.600 0 0 0 8.300 20c7.500 0 11.700-6.300 11.700-11.700v-.5c.8-.6 1.500-1.300 2-2Z"/></symbol>
+  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.500" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 5.500c4 2 9 4 14 3M8.500 3c3 4 5 9 5.500 18M3 11.500c5 1 11 1 17.500 7" fill="none" stroke="currentColor" stroke-width="1.800"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.600" fill="currentColor"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5M8 3v18" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"/><rect x="2.500" y="2.500" width="5" height="5" fill="currentColor"/><rect x="16.500" y="2.500" width="5" height="5" fill="currentColor"/><rect x="2.500" y="16.500" width="5" height="5" fill="currentColor"/><rect x="16.500" y="16.500" width="5" height="5" fill="currentColor"/></symbol>
+  <symbol id="i-proto" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m9 8 3 8 1.500-3L16.500 11.500z" fill="currentColor"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20 15 9m0 0 3-3 2 2-3 3m-2-2 2 2M4 20l1-4 3 3z" stroke="currentColor" stroke-width="2.200" fill="none" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<main class="bento">
+
+  <!-- КОЛОНКА 1 -->
+  <div class="col col-a">
+    <section class="card stacks">
+      <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-layers"/></svg>My Stacks</span><h2>Tech Arsenal</h2></header>
+      <div class="tools">
+        <div class="tool"><span class="logo">W</span>Webflow</div>
+        <div class="tool"><span class="logo">F</span>Figma</div>
+        <div class="tool"><span class="logo">Fr</span>Framer</div>
+        <div class="tool"><span class="logo xd">Xd</span>Adobe XD</div>
+      </div>
+    </section>
+
+    <section class="card projects">
+      <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-case"/></svg>Projects</span><h2>Works Gallery</h2></header>
+      <div class="shots">
+        <div class="shot s1"></div>
+        <div class="shot s2"></div>
+        <div class="shot s3"></div>
+      </div>
+      <a href="#" class="btn over">View Works</a>
+    </section>
+
+    <section class="card services">
+      <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-grid"/></svg>Services</span><h2>Solutions Suite</h2></header>
+      <div class="pills">
+        <div class="pill-row"><span class="pill">e App Design</span><span class="pill"><svg class="ic"><use href="#i-globe"/></svg>No Code development</span></div>
+        <div class="pill-row"><span class="pill"><svg class="ic"><use href="#i-grid"/></svg>Wo</span><span class="pill">le App Desig</span></div>
+      </div>
+      <a href="#" class="btn over">View All Services</a>
+    </section>
+  </div>
+
+  <!-- КОЛОНКА 2 -->
+  <div class="col col-b">
+    <div class="stats">
+      <div class="card stat"><b>01<i>+</i></b><span class="tag"><svg class="ic"><use href="#i-flag"/></svg>Projects</span></div>
+      <div class="card stat"><b>01<i>+</i></b><span class="tag"><svg class="ic"><use href="#i-smile"/></svg>Happy Clients</span></div>
+      <div class="card stat"><b>01<i>+</i></b><span class="tag"><svg class="ic"><use href="#i-star"/></svg>Year Expertise</span></div>
+    </div>
+
+    <section class="card profile">
+      <div class="who">
+        <div class="avatar" aria-label="Фото профиля"></div>
+        <div class="info">
+          <div class="top"><span class="avail"><span class="led"></span>Available To Work</span>
+            <span class="resume">Resume<a href="#" class="dl" aria-label="Скачать резюме"><svg class="ic"><use href="#i-download"/></svg></a></span></div>
+          <h1>Adylgazieva Jarkynai</h1>
+          <p>I'm a <a href="#">Frontend Developer</a></p>
+        </div>
+      </div>
+      <div class="facts">
+        <span class="fact"><svg class="ic"><use href="#i-pin"/></svg>Kyrgyzstan</span>
+        <span class="fact"><svg class="ic"><use href="#i-globe"/></svg>English &amp; Russian</span>
+        <span class="fact"><svg class="ic"><use href="#i-flag"/></svg>Frontend Developer</span>
+        <span class="fact"><svg class="ic"><use href="#i-cap"/></svg>Ala-Too University</span>
+        <span class="fact"><svg class="ic"><use href="#i-dot"/></svg>SCA</span>
+      </div>
+      <div class="contacts">
+        <a href="#" class="cbtn"><svg class="ic"><use href="#i-insta"/></svg>DM me (Instagram)</a>
+        <a href="#" class="cbtn"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp Me</a>
+      </div>
+    </section>
+
+    <section class="card clients">
+      <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-rocket"/></svg>My Clients</span><h2>Satisfied Partners</h2></header>
+      <div class="logos">
+        <div class="lrow"><span class="lg">TikTok</span><span class="lg spot">Spotify</span><span class="lg fb">facebook</span><span class="lg">You</span></div>
+        <div class="lrow r2"><span class="lg">cord</span><span class="lg"><svg class="ic"><use href="#i-insta"/></svg>Instagram</span><span class="lg">Snapchat</span><span class="lg dr">Dribbble</span></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ПРАВАЯ ЧАСТЬ -->
+  <div class="col col-c">
+    <div class="row top">
+      <section class="card reviews">
+        <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-shield"/></svg>Testimonials</span><h2>Reviews Showcase</h2></header>
+        <div class="rv-body">
+          <article class="review">
+            <div class="rv-head"><span class="ava a1"></span><div><b>Sai Abhishek Mishra</b><small>Mumbai, India</small></div><time>11, Apr 2024</time></div>
+            <p>Sanjay is a remarkable Product Designer, renowned for his exceptional UI skills and creating Awwwards-worthy websites. I highly recommend Sanjay for any Product Designer role that requires a talented and dedicated professional with a focus on UI skills.</p>
+          </article>
+          <article class="review r2">
+            <div class="rv-head"><span class="ava a2"></span><div><b>Courtney Henry</b><small>Iceland</small></div><time>11, Feb 2024</time></div>
+            <p>Lorem ipsum dolor sit amet consectetur. Ut est</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card process">
+        <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-star"/></svg>Work Process</span><h2>Workflow Highlights</h2></header>
+        <ul class="steps">
+          <li><span class="sq"><svg class="ic"><use href="#i-target"/></svg></span>Goals &amp; Objectives</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-doc"/></svg></span>Research</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-frame"/></svg></span>Wireframe</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-proto"/></svg></span>Prototyping</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-pen"/></svg></span>Finalize Design</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="row bottom">
+      <section class="card follow">
+        <header class="head"><span class="eyebrow"><svg class="ic"><use href="#i-rocket"/></svg>Follow Me</span><h2>Online Presence</h2></header>
+        <ul class="socials">
+          <li><span class="sq"><svg class="ic"><use href="#i-insta"/></svg></span>visualsbyartam</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-in"/></svg></span>sanjay-billa</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-ball"/></svg></span>sanjaybilla</li>
+          <li><span class="sq"><svg class="ic"><use href="#i-bird"/></svg></span>visualsbyartam</li>
+        </ul>
+      </section>
+
+      <section class="card together">
+        <span class="crown"><svg class="ic"><use href="#i-crown"/></svg></span>
+        <h2>Let's Work Together</h2>
+        <p>Let's Make Magic Happen Together!</p>
+        <a href="#" class="cbtn wide"><svg class="ic"><use href="#i-mail"/></svg>Email Me</a>
+        <a href="#" class="cbtn wide"><svg class="ic"><use href="#i-cal"/></svg>Schedule a Call</a>
+      </section>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
