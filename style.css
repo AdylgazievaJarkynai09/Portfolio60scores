@@ -1,0 +1,147 @@
+:root{
+  --bg:#09090b; --card:#131316; --line:#1f1f24; --item:#1c1c20;
+  --text:#ececf0; --muted:#8a8a94; --accent:#8b5cf6; --btn:#9a6cf4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{font-family:'Manrope',system-ui,sans-serif;color:var(--text);padding:14px 24px;min-height:100vh}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.ic{width:18px;height:18px;flex:none;color:currentColor}
+
+/* ===== сетка ===== */
+.bento{display:flex;gap:14px;max-width:1560px;margin:0 auto;min-height:780px}
+.col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.col-a{flex:373}
+.col-b{flex:502}
+.col-c{flex:630}
+.row{display:flex;gap:14px}
+.row.top{flex:none;height:400px}
+.row.bottom{flex:1}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:26px;position:relative;overflow:hidden}
+
+/* заголовок карточки */
+.head{text-align:center;padding:26px 0 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--muted);font-weight:500}
+.eyebrow .ic{color:var(--accent);width:20px;height:20px}
+.head h2{font-size:18px;font-weight:600;margin-top:10px}
+
+/* ===== колонка A ===== */
+.stacks{height:250px}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:24px 22px}
+.tool{display:flex;align-items:center;gap:14px;background:var(--item);border-radius:14px;padding:12px 14px;font-size:15px;font-weight:500}
+.logo{width:34px;height:34px;border-radius:10px;background:#2b2b31;display:grid;place-items:center;font-size:14px;font-weight:700}
+.logo.xd{background:#3a1d48;color:#f28bff;font-size:13px}
+
+.projects{height:244px}
+.shots{display:flex;gap:10px;padding:28px 12px 0;margin-top:0}
+.shot{flex:none;width:137px;height:88px;border-radius:8px}
+.s1{background:linear-gradient(160deg,#7f9bd9,#f0b1a0 60%,#7cd1c4)}
+.s2{background:linear-gradient(160deg,#3b4a8f,#7c4a8f 55%,#d98fa8)}
+.s3{width:64px;background:linear-gradient(160deg,#222,#5b4b44)}
+.btn{display:inline-block;background:var(--btn);color:#fff;font-weight:600;font-size:16px;padding:14px 30px;border-radius:12px;box-shadow:0 8px 24px rgba(139,92,246,.35)}
+.over{position:absolute;left:50%;transform:translateX(-50%);bottom:20px}
+.projects .over{bottom:20px;padding:14px 30px}
+
+.services{flex:1;min-height:250px}
+.pills{padding:28px 0 0 14px;display:flex;flex-direction:column;gap:14px;
+  -webkit-mask-image:linear-gradient(#000 30%,transparent 95%);mask-image:linear-gradient(#000 30%,transparent 95%)}
+.pill-row{display:flex;gap:12px;margin-left:-8px}
+.pill{display:inline-flex;align-items:center;gap:12px;background:var(--item);border-radius:14px;padding:16px 18px;font-size:15px;font-weight:500;white-space:nowrap;height:56px}
+.pill .ic{width:30px;height:30px;padding:6px;border-radius:50%;background:#2b2b31}
+
+/* ===== колонка B ===== */
+.stats{display:flex;gap:14px}
+.stat{flex:1;height:121px;text-align:center;padding-top:14px}
+.stat b{display:block;font-size:56px;font-weight:300;letter-spacing:-.01em;line-height:1;color:#d6d6dc;
+  background:linear-gradient(#e8e8ec 30%,#46464d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat b i{font-style:normal;font-size:30px;color:var(--accent);-webkit-text-fill-color:var(--accent);margin-left:6px;vertical-align:middle}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--item);border-radius:10px;padding:8px 14px;font-size:15px;font-weight:500;margin-top:14px}
+.tag .ic{color:var(--accent);width:17px;height:17px}
+
+.profile{padding:20px;height:373px}
+.who{display:flex;gap:16px}
+.avatar{width:110px;height:110px;border-radius:14px;flex:none;background:
+  radial-gradient(circle at 50% 38%,#4a5a66 0 22%,transparent 23%),linear-gradient(160deg,#a8b3a0,#59656b)}
+.info{flex:1;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center}
+.avail{display:inline-flex;align-items:center;gap:12px;background:var(--item);border-radius:30px;padding:8px 16px 8px 12px;font-size:15px;font-weight:500}
+.led{width:14px;height:14px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.resume{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600}
+.dl{width:38px;height:38px;border-radius:10px;background:var(--item);display:grid;place-items:center;border:1px solid var(--line)}
+h1{font-size:24px;font-weight:600;margin-top:16px;letter-spacing:-.01em}
+.info p{margin-top:12px;font-size:16px;color:#b8b8c0}
+.info p a{color:var(--accent);font-weight:500}
+
+.facts{margin-top:22px;border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-wrap:wrap;gap:12px;background:#101013}
+.fact{display:inline-flex;align-items:center;gap:10px;background:var(--item);border-radius:30px;padding:9px 16px;font-size:15px;font-weight:500}
+.fact .ic{color:var(--accent);width:17px;height:17px}
+
+.contacts{display:flex;gap:14px;margin-top:20px}
+.cbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:12px;background:var(--item);border:1px solid var(--line);border-radius:14px;height:56px;font-size:15px;font-weight:500}
+.cbtn .ic{color:var(--accent)}
+
+.clients{flex:1;min-height:260px}
+.logos{margin-top:30px;display:flex;flex-direction:column;gap:14px;padding:0 20px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent),linear-gradient(#000 30%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect}
+.lrow{display:flex;gap:14px;margin-left:-10px;white-space:nowrap}
+.lrow.r2{margin-left:-40px}
+.lg{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:130px;height:56px;padding:0 24px;background:var(--item);border-radius:14px;font-size:22px;font-weight:700;color:#bfbfc7}
+.lg.spot{font-size:24px;min-width:150px}
+.lg.fb{font-family:'Manrope',sans-serif;letter-spacing:-.02em;font-size:24px}
+.lg.dr{font-style:italic;font-weight:500;color:#8a8a94}
+.lg .ic{width:26px;height:26px}
+
+/* ===== правая часть ===== */
+.reviews{flex:372}
+.rv-body{margin-top:20px;border-top:1px solid var(--line);padding:18px 14px 0}
+.review{border:1px solid var(--line);border-radius:18px;padding:12px 14px;background:#101013}
+.rv-head{display:flex;align-items:center;gap:12px}
+.rv-head div{flex:1}
+.rv-head b{display:block;font-size:15px;font-weight:500;color:#c9c9d0}
+.rv-head small{font-size:13px;color:var(--muted)}
+.rv-head time{font-size:13px;color:var(--muted);align-self:flex-start}
+.ava{width:36px;height:36px;border-radius:50%;flex:none}
+.a1{background:radial-gradient(circle at 50% 40%,#d9a87a 0 28%,transparent 30%),linear-gradient(#3c8d4a,#1f5a2e)}
+.a2{background:radial-gradient(circle at 50% 40%,#c98f68 0 28%,transparent 30%),linear-gradient(#b9c1c9,#6a737d)}
+.review p{margin-top:12px;font-size:14px;line-height:1.5;color:#a7a7b0}
+.review.r2{margin:14px 14px 0 30px;border:none;background:transparent;padding:10px 0 0;
+  -webkit-mask-image:linear-gradient(#000 30%,transparent);mask-image:linear-gradient(#000 30%,transparent)}
+.review.r2 p{color:#555}
+
+.process{flex:244}
+.steps{margin-top:20px;border-top:1px solid var(--line);padding:14px 12px;display:flex;flex-direction:column;gap:10px}
+.steps li,.socials li{display:flex;align-items:center;gap:12px;background:var(--item);border-radius:14px;padding:9px 12px;font-size:15px;font-weight:500;height:48px}
+.sq{width:32px;height:32px;border-radius:9px;background:#2d2d33;display:grid;place-items:center;flex:none;color:#d9d9df}
+.sq .ic{width:18px;height:18px}
+
+.follow{flex:244}
+.socials{padding:22px 12px 0;display:flex;flex-direction:column;gap:11px}
+.socials li{height:52px}
+.together{flex:373;display:flex;flex-direction:column;align-items:center;padding:42px 20px 20px}
+.crown{width:60px;height:60px;border-radius:50%;background:#26262c;display:grid;place-items:center;color:var(--accent)}
+.crown .ic{width:28px;height:28px}
+.together h2{font-size:24px;font-weight:600;margin-top:28px}
+.together p{font-size:15px;color:#b3b3bb;margin:14px 0 30px}
+.cbtn.wide{flex:none;width:100%;height:54px;margin-bottom:12px;border-radius:12px}
+
+/* ===== адаптив ===== */
+@media (max-width:1100px){
+  .bento{flex-direction:column}
+  .col,.col-a,.col-b,.col-c{flex:none}
+  .row{flex-direction:column}
+  .row.top{height:auto}
+  .reviews,.process,.follow,.together{flex:none}
+  .stacks,.projects{height:auto;padding-bottom:20px}
+  .projects{height:260px}
+}
+@media (max-width:560px){
+  body{padding:10px}
+  .tools{grid-template-columns:1fr}
+  .who{flex-direction:column}
+  .profile{height:auto}
+  .contacts{flex-direction:column}
+  .stat b{font-size:40px}
+}
